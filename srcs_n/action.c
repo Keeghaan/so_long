@@ -6,11 +6,23 @@
 /*   By: jcourtoi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 13:58:24 by jcourtoi          #+#    #+#             */
-/*   Updated: 2022/05/27 11:39:26 by jcourtoi         ###   ########.fr       */
+/*   Updated: 2022/05/27 15:47:40 by jcourtoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes_n/so_long.h"
+
+void	ft_counter(t_game *game)
+{
+	char	*counter;
+	int		trgb;
+
+	counter = ft_itoa(game->steps);
+	trgb = create_trgb(T, R, G, B);
+	mlx_string_put(game->mlx, game->win, DIM1, DIM2
+		+ 100, get_r(trgb), counter);
+	free(counter);
+}
 
 static void	ft_player_moves(t_game *game, int key)
 {

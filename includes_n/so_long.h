@@ -6,7 +6,7 @@
 /*   By: jcourtoi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 13:13:26 by jcourtoi          #+#    #+#             */
-/*   Updated: 2022/05/27 14:57:30 by jcourtoi         ###   ########.fr       */
+/*   Updated: 2022/05/27 15:36:03 by jcourtoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,10 @@
 # define FLOOR2 "./img/floor4.xpm"
 # define ENEMY "./img/enemy.xpm"
 # define ENEMY2 "./img/enemy2.xpm"
+# define T 0xFF000000
+# define R 0x00FF0000
+# define G 0x0000FF00
+# define B 0x000000FF
 
 enum
 {
@@ -101,6 +105,11 @@ typedef struct s_game
 	t_img	*img;
 }	t_game;
 
+int		create_trgb(int t, int r, int g, int b);
+int		get_t(int trgb);
+int		get_r(int trgb);
+int		get_g(int trgb);
+int		get_b(int trgb);
 int		open_fd(char **av);
 int		ft_parsing(char *tab, int i, int height, int width);
 int		check_args(int ac, char **av);
@@ -117,6 +126,7 @@ int		ft_init_game(t_game *game, char *av);
 int		get_height(int fd, t_game *game);
 int		short_map(t_game *game);
 int		is_elem(char c);
+void	ft_counter(t_game *game);
 void	free_game(t_game *game);
 void	check_elem(t_game *game, char *tab, int i);
 void	ft_create(t_game *game);

@@ -6,7 +6,7 @@
 /*   By: jcourtoi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 16:13:28 by jcourtoi          #+#    #+#             */
-/*   Updated: 2022/05/27 11:37:52 by jcourtoi         ###   ########.fr       */
+/*   Updated: 2022/05/27 15:42:03 by jcourtoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,7 @@ void	ft_create(t_game *game)
 				put_img(game, game->map[x][y], &x, &y);
 			y++;
 		}
+		ft_counter(game);
 		x++;
 	}
 }
