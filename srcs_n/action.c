@@ -6,7 +6,7 @@
 /*   By: jcourtoi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/25 13:58:24 by jcourtoi          #+#    #+#             */
-/*   Updated: 2022/05/27 15:47:40 by jcourtoi         ###   ########.fr       */
+/*   Updated: 2022/05/27 16:03:49 by jcourtoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_counter(t_game *game)
 	counter = ft_itoa(game->steps);
 	trgb = create_trgb(T, R, G, B);
 	mlx_string_put(game->mlx, game->win, DIM1, DIM2
-		+ 100, get_r(trgb), counter);
+		+ 100, get_b(trgb), counter);
 	free(counter);
 }
 

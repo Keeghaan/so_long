@@ -6,7 +6,7 @@
 /*   By: jcourtoi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 13:13:26 by jcourtoi          #+#    #+#             */
-/*   Updated: 2022/05/27 15:36:03 by jcourtoi         ###   ########.fr       */
+/*   Updated: 2022/05/27 16:03:09 by jcourtoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,10 +52,10 @@
 # define FLOOR2 "./img/floor4.xpm"
 # define ENEMY "./img/enemy.xpm"
 # define ENEMY2 "./img/enemy2.xpm"
-# define T 0xFF000000
-# define R 0x00FF0000
-# define G 0x0000FF00
-# define B 0x000000FF
+# define T 4278190080
+# define R 16711680
+# define G 65280
+# define B 255
 
 enum
 {
@@ -105,7 +105,7 @@ typedef struct s_game
 	t_img	*img;
 }	t_game;
 
-int		create_trgb(int t, int r, int g, int b);
+int		create_trgb(long t, int r, int g, int b);
 int		get_t(int trgb);
 int		get_r(int trgb);
 int		get_g(int trgb);
