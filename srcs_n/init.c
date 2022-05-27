@@ -6,7 +6,7 @@
 /*   By: jcourtoi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 14:16:22 by jcourtoi          #+#    #+#             */
-/*   Updated: 2022/05/27 15:08:14 by jcourtoi         ###   ########.fr       */
+/*   Updated: 2022/05/27 18:18:27 by jcourtoi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int	get_map(t_game *game, int fd)
 	int		i;
 
 	i = 0;
-	game->map = malloc(game->width * (game->height + 1));
+	game->map = malloc((game->width + 1) * (game->height + 1));
 	if (!game->map)
 		return (ft_printf("Error\nMalloc failed\n"), 0);
 	initialize(game);
